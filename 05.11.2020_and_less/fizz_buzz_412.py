@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/fizz-buzz/submissions/
 
 class Solution:
-    def fizzBuzz(self, n: int) -> List[str]:
+    def fizzBuzz(self, n):
         a = []
         for val in range(1,n+1):
             if val%3 == 0 and val%5 == 0:
@@ -13,3 +13,5 @@ class Solution:
             else:
                 a.append(str(val))
         return a
+
+

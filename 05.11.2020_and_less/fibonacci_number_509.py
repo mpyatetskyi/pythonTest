@@ -15,4 +15,3 @@ class Solution:
             if N >= 2:
                 answer = fiblist[N - 1] + fiblist[N - 2]
         return answer
-
