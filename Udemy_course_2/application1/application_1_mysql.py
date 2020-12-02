@@ -10,7 +10,7 @@ connection = mysql.connector.connect(
     database='ardit700_pm1database'
 )
 
-connection.cursor()
+cursor = connection.cursor()
 
 query = cursor.execute(f'SELECT * FROM Dictionary')
 results = cursor.fetchall()
