@@ -35,8 +35,7 @@ class Solution():
             return None
 
         try:
-            mylist1.sort()
-            my_sorted_list_1 = mylist1
+            my_sorted_list_1 = sorted(mylist1)
         except:
             my_sorted_list_1 = []
             for value in mylist1:
@@ -47,8 +46,7 @@ class Solution():
             my_sorted_list_1.sort()
 
         try:
-            mylist2.sort()
-            my_sorted_list_2 = mylist2
+            my_sorted_list_2 = sorted(mylist2)
         except:
             my_sorted_list_2 = []
             for value in mylist2:
