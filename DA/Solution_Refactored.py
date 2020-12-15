@@ -34,16 +34,39 @@ class Solution():
             print('Sorry, you have a blank list')
             return None
 
+        try:
+            mylist1.sort()
+            my_sorted_list_1 = mylist1
+        except:
+            my_sorted_list_1 = []
+            for value in mylist1:
+                if isinstance(value,str):
+                    continue
+                else:
+                    my_sorted_list_1.append(value)
+            my_sorted_list_1.sort()
+
+        try:
+            mylist2.sort()
+            my_sorted_list_2 = mylist2
+        except:
+            my_sorted_list_2 = []
+            for value in mylist2:
+                if isinstance(value,str):
+                    continue
+                else:
+                    my_sorted_list_2.append(value)
+            my_sorted_list_2.sort()
+
         maxsum = None
-        mylist1.sort()
-        mylist2.sort()
-        if mylist1[0] + mylist2[0] > num:
+
+        if my_sorted_list_1[0] + my_sorted_list_2[0] > num:
             return None
-        for i in mylist1:
-            if i + mylist2[0] > num:
+        for i in my_sorted_list_1:
+            if i + my_sorted_list_2[0] > num:
                 return maxsum
             else:
-                for j in mylist2:
+                for j in my_sorted_list_2:
                     if i+j > num:
                         break
                     elif i+j < num and (maxsum is None or i+j > maxsum):
@@ -56,8 +79,8 @@ class Solution():
 
 
 
-a = [1,-4,6,2,-7,8,9,-99]
-b = [-45,0.9,-14,67,-15,15,-228,23,54]
+a = [1,-4,'s',6,2,-7,8,9,-99]
+b = [-45,'a',0.9,-14,67,-15,'b',15,-228,23,54]
 c = 1000
 
 
