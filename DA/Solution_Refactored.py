@@ -44,22 +44,20 @@ class Solution():
                 return maxsum
             else:
                 for j in mylist2:
-                    if i+j < num and maxsum is None:
-                        maxsum = (i+j)
-                    elif i+j < num:
-                        if i+j > maxsum:
-                            maxsum = (i+j)
-                        else:
-                            continue
-                    else:
+                    if i+j > num:
                         break
+                    elif i+j < num and (maxsum is None or i+j > maxsum):
+                        maxsum = (i+j)
+                    else:
+                        continue
+
         return maxsum
 
 
 
 
-a = [1,4,6,2,7,8,9]
-b = [-45,-0.9,14,-67,15,-15,228,23,-54]
+a = [1,-4,6,2,-7,8,9,-99]
+b = [-45,0.9,-14,67,-15,15,-228,23,54]
 c = 1000
 
 
