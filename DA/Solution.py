@@ -30,5 +30,18 @@ class Solution():
         return mysum
 
 
+    def my_func3(self,mylist1,mylist2,num):
+        mylist1.sort(reverse = True)
+        mylist2.sort(reverse = True)
+
+        if mylist1[0] + mylist2[0] < num:
+            return mylist1[0] + mylist2[0]
 
 
+a = [1,4,6,]
+b = [45,1,14,67]
+c = 100
+
+
+func = Solution()
+print(func.my_func3(a,b,c))
