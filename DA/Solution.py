@@ -37,29 +37,13 @@ class Solution():
         return mysum
 
 
-    def my_func_reverse_sorted(self,mylist1,mylist2,num):
-        mylist1.sort(reverse=True)
-        mylist2.sort(reverse=True)
-        mysum = None
-        for i in mylist1:
-            for j in mylist2:
-                if i+j > num:
-                    continue
-                elif i+j < num and mysum is None:
-                    mysum = i+j
-                    break
-                elif i+j < mysum:
-                    break
-                elif i+j > mysum:
-                    mysum = i+j
-        return mysum
+
 
 a = [-1,-4,6,-2]
-b = [-45,-1,-14,67]
-c = 67
+b = [45,1,-14,67]
+c = 10
 
 
 func = Solution()
 print(func.my_func(a,b,c))
 print(func.my_func_sorted(a,b,c))
-print(func.my_func_reverse_sorted(a,b,c))
